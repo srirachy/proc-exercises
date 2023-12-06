@@ -27,7 +27,7 @@ const getRes = () => {
         const t = createTable(gradeArr, gpa);
         document.getElementById('res-nine').innerHTML = t;
     } else {
-        alert('Please Enter a Valid Number');
+        alert('Please Enter a Number: 0-100');
     }
 }
 
