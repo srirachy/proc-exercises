@@ -50,12 +50,50 @@ let data= [
             "about": "Cognizant is a major Information technology MNC which helps customers in changing their traditional businesses, operations, and technologies to reap the benefits of quickly altering digital technologies. Thus making it one of the leading IT companies in the world."
     },
     {
-            "Company_name": "Zensar",
+            "company_name": "Zensar",
             "img_src":"https://pbs.twimg.com/profile_images/1545016797350744064/Xxt_JFUA_400x400.jpg",
             "about":"Zensar is a technology consulting and services company with 10,000 associates in 33 global locations. More than 130 leading enterprises depend on our expertise to be more disruptive, agile, and competitive."
     }
 ];
 
 const getRes = () => {
-    console.log(data);
+    const ele = document.getElementById('ten');
+    const t = createTable();
+    ele.innerHTML = t;
 };
+
+const createTable = () => {
+    const tableTop = `
+    <div
+        class="table-responsive"
+    >
+        <table
+            class="table table-primary"
+        >
+            <thead>
+                <tr>
+                    <th scope="col">Company Name</th>
+                    <th scope="col">Logo</th>
+                    <th scope="col">About</th>
+                </tr>
+            </thead>
+            <tbody>
+    `;
+    const tableMid = data.map((item) => {
+        const str = 
+        `
+        <tr class="">
+            <td scope="row">${item.company_name}</td>
+            <td><img src="${item.img_src}" alt="Logo of ${item.company_name}"></td>
+            <td>${item.about}</td>
+        </tr>
+        `;
+        return str;
+    });
+    const tableBottom = `
+        </tbody>
+        </table>
+    </div>
+    `;
+    return tableTop + tableMid.join('') + tableBottom;
+}
