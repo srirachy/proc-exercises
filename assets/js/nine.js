@@ -20,11 +20,17 @@ const getRes = () => {
     const tFour = document.getElementById('topic-four').value;
     const tFive = document.getElementById('topic-five').value;
     const gradeArr = [tOne, tTwo, tThree, tFour, tFive];
-    const gradeMap = gradeArr.map(Number);
+    const gradeMap = gradeArr.map((val) => {
+        if(val.length > 0){
+            return Number(val);
+        } else {
+            return 0;
+        }
+    });
     const [weightMap, check] = convertGrades(gradeMap);
     if(check) {
         const gpa = calcGpa(weightMap);
-        const t = createTable(gradeArr, gpa);
+        const t = createTable(gradeMap, gpa);
         document.getElementById('res-nine').innerHTML = t;
     } else {
         alert('Please Enter a Number: 0-100');
@@ -34,6 +40,7 @@ const getRes = () => {
 const convertGrades = (gm) => {
     let allNums = true;
     const wMap = gm.map((val) => {
+        console.log(val);
         let res = 0;
         allNums = (100 >= Number(val) && Number(val) >= 0) ? allNums : false;
         if(allNums){
@@ -77,7 +84,7 @@ const calcGpa = (wm) => {
     return ((val * 4) / 20).toFixed(2);
 }
 
-const createTable = (gArr, oGpa) => {
+const createTable = (gm, oGpa) => {
     const table = `
         <div
             class="table-responsive"
@@ -94,23 +101,23 @@ const createTable = (gArr, oGpa) => {
                 <tbody>
                     <tr class="">
                         <td scope="col">Topic One</td>
-                        <td>${gArr[0]}</td>
+                        <td>${gm[0]}</td>
                     </tr>
                     <tr class="">
                         <td scope="col">Topic Two</td>
-                        <td>${gArr[1]}</td>
+                        <td>${gm[1]}</td>
                     </tr>
                     <tr class="">
-                    <td scope="col">Topic Two</td>
-                        <td>${gArr[2]}</td>
+                    <td scope="col">Topic Three</td>
+                        <td>${gm[2]}</td>
                     </tr>
                     <tr class="">
-                    <td scope="col">Topic Two</td>
-                        <td>${gArr[3]}</td>
+                    <td scope="col">Topic Four</td>
+                        <td>${gm[3]}</td>
                     </tr>
                     <tr class="">
-                    <td scope="col">Topic Two</td>
-                        <td>${gArr[4]}</td>
+                    <td scope="col">Topic Five</td>
+                        <td>${gm[4]}</td>
                     </tr>
                 </tbody>
             </table>
