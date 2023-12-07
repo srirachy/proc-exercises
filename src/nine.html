@@ -5,57 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ex Nine</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <div class="container p-4">
-        <h1>Calculate GPA</h1>
-    </div>
-    <div class="container" id="res-nine">
-        <form>
-            <div class="container d-flex">
-                <div class="col-1">
-                    <div class="row p-2">
-                        <label for="" class="form-label">Topic One</label>
+    <div class="container d-flex flex-column justify-content-center" id="nine">
+        <div class="container text-center">
+            <h1>Calculate GPA</h1>
+        </div>
+        <div class="container" id="res-nine">
+            <form>
+                <div class="container d-flex justify-content-center align-items-center">
+                    <div class="col d-flex flex-column justify-content-center align-items-end me-5">
+                        <div class="row p-2">
+                            <label for="" class="form-label">Topic One</label>
+                        </div>
+                        <div class="row p-2">
+                            <label for="" class="form-label">Topic Two</label>
+                        </div>
+                        <div class="row p-2">
+                            <label for="" class="form-label">Topic Three</label>
+                        </div>
+                        <div class="row p-2">
+                            <label for="" class="form-label">Topic Four</label>
+                        </div>
+                        <div class="row p-2">
+                            <label for="" class="form-label">Topic Five</label>
+                        </div>
                     </div>
-                    <div class="row p-2">
-                        <label for="" class="form-label">Topic Two</label>
-                    </div>
-                    <div class="row p-2">
-                        <label for="" class="form-label">Topic Three</label>
-                    </div>
-                    <div class="row p-2">
-                        <label for="" class="form-label">Topic Four</label>
-                    </div>
-                    <div class="row p-2">
-                        <label for="" class="form-label">Topic Five</label>
-                    </div>
+                
+                    <div class="col d-flex flex-column justify-content-center align-items-start">
+                        <div class="row p-1">
+                            <input type="text" class="form-control" name="" id="topic-one" placeholder="" />
+                        </div>
+                        <div class="row p-1">
+                            <input type="text" class="form-control" name="" id="topic-two" placeholder="" />
+                        </div>
+                        <div class="row p-1">
+                            <input type="text" class="form-control" name="" id="topic-three" placeholder="" />
+                        </div>
+                        <div class="row p-1">
+                            <input type="text" class="form-control" name="" id="topic-four" placeholder="" />
+                        </div>
+                        <div class="row p-1">
+                            <input type="text" class="form-control" name="" id="topic-five" placeholder="" />
+                        </div>
+                    </div>     
                 </div>
-            
-                <div class="col-11 mt-1">
-                    <div class="row p-1 w-25">
-                        <input type="text" class="form-control" name="" id="topic-one" placeholder="" />
-                    </div>
-                    <div class="row p-1 w-25">
-                        <input type="text" class="form-control" name="" id="topic-two" placeholder="" />
-                    </div>
-                    <div class="row p-1 w-25">
-                        <input type="text" class="form-control" name="" id="topic-three" placeholder="" />
-                    </div>
-                    <div class="row p-1 w-25">
-                        <input type="text" class="form-control" name="" id="topic-four" placeholder="" />
-                    </div>
-                    <div class="row p-1 w-25">
-                        <input type="text" class="form-control" name="" id="topic-five" placeholder="" />
-                    </div>
-                </div>     
-            </div>
-            <div class="container ms-5">
-                <button type="button" class="btn btn-primary btn-lg w-25" id="btn-res" onclick="getRes()">
-                    Get Results
-                </button>
-            </div>
-        </form>
+                <div class="container d-flex justify-content-center align-items-center">
+                    <button type="button" class="btn btn-primary btn-lg" id="btn-res" onclick="getRes()">
+                        Get Results
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
     <!-- scripts -->
     <script src="../assets/js/nine.js"></script>
