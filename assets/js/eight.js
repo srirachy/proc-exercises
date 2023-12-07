@@ -4,7 +4,7 @@ const getRes = () => {
     const check = (!Number(inputOne) && !Number(inputTwo)) ? 'Please enter a valid number.' : '';
     if(!check){
         const res = Number(inputOne) + Number(inputTwo);
-        document.getElementById('res-eight').innerHTML = String(res);
+        document.getElementById('res-eight').innerHTML = 'Total: ' + String(res);
     } else {
         alert(check);
     }

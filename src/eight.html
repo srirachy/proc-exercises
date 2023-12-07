@@ -4,36 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ex Eight</title>
-    <link href="../css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Add Two Values</h1>
-    </div>
-    <div class="container">
-        <form>
-            <div class="mb-3">
-                <label for="" class="form-label">First Value</label>
-                <input type="text" class="form-control" name="" id="input-one" placeholder="" />
-            </div>
-            <div class="mb-3">
-                <label for="" class="form-label">Second Value</label>
-                <input type="text" class="form-control" name="" id="input-two" placeholder="" />
-            </div>
-            <button
-                type="button"
-                class="btn btn-primary"
-                onclick="getRes()"
-            >
-                Add Them Up
-            </button>
-            
+    <div class="container d-flex flex-column justify-content-center align-items-center" id="eight">
+        <div class="container text-center">
+            <h1>Add Two Values</h1>
+        </div>
+        <div class="container">
+            <form>
+                <div class="mb-3">
+                    <label for="" class="form-label">First Value</label>
+                    <input type="text" class="form-control" name="" id="input-one" placeholder="" />
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Second Value</label>
+                    <input type="text" class="form-control" name="" id="input-two" placeholder="" />
+                </div>
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    onclick="getRes()"
+                >
+                    Add Them Up
+                </button>
+                
 
-            <div class="container d-none">
-                <p id="res-eight"></p>
-            </div>
-        </form>
+                <div class="container">
+                    <p id="res-eight">Total:</p>
+                </div>
+            </form>
+        </div>
     </div>
     <!-- scripts -->
     <script src="../assets/js/eight.js"></script>
