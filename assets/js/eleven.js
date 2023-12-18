@@ -28,7 +28,6 @@ async function getWeather(wUrl, wKey, wVal) {
         res = await fetch(urlFc);
         resData = await res.json();
         const wData = filterData(resData);
-        console.log(wData);
         wVal ? displayFive(wData) : displayOne(wData[0]);
     }
     catch{
