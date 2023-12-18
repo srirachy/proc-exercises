@@ -40,7 +40,6 @@ const getRes = () => {
 const convertGrades = (gm) => {
     let allNums = true;
     const wMap = gm.map((val) => {
-        console.log(val);
         let res = 0;
         allNums = (100 >= Number(val) && Number(val) >= 0) ? allNums : false;
         if(allNums){
