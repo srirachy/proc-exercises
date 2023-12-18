@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thirteen</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <h1>Regular Date-Time</h1>
+    <div id="regularDiv">
+        Regular div, this should show time
+    </div>
+    <br><br><hr>
+    <h1>React Date-Time</h1>
+    <div id="reactDiv">
+        React div, this should show time
+    </div>
+</body>
+    <script type="text/babel">
+        const regDiv = document.getElementById("regularDiv");
+        const rootNode = ReactDOM.createRoot(document.getElementById('reactDiv'));
+        const TimeComp = () => {
+            return (<>
+                <input />
+                <p>{new Date().toString()}</p>
+            </>);
+        }
+
+        const renderTime = () => {
+            regDiv.innerHTML = `<div><input/><p>${new Date()}</p></div>`;
+            let dateComp = React.createElement(
+                "div", null,
+                React.createElement("input"),
+                rootNode.render(<TimeComp/>)
+            );
+            root.render(DateComp)
+        }
+
+        setInterval(renderTime, 1000);
+    </script>
+</html>
