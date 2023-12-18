@@ -7,28 +7,30 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-    <div class="mb-3">
-        <label for="" class="form-label">ZipCode</label>
-        <input
-            type="text"
-            class="form-control"
-            name=""
-            id="zipcode"
-            placeholder=""
-        />
-    </div>
+<body class="bg-dark">
+    <div class="container d-flex flex-column justify-content-center align-items-center bkg_eleven" id="eleven">
+        <div class="container d-flex flex-column justify-content-center align-items-center div-transparent w-75 p-3 mt-3 mt-lg-0">
+            <div class="container text-center text-white">
+                <h1>Weather</h1>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label text-white">Search by City Name or Zip-Code</label>
+                <input type="text" class="form-control" name="" id="userinput" placeholder="San Jose / 95131" />
+            </div>
     
-    <button
-        type="button"
-        class="btn btn-primary"
-        onclick="getWeather()"
-    >
-        Button
-    </button>
-
-    <div class="container" id="test">
-
+            <div class="container d-flex justify-content-center align-items-center">
+                <button type="button" class="btn btn-primary mx-1" onclick="getWeatherOne()">
+                    One-Day
+                </button>
+    
+                <button type="button" class="btn btn-primary mx-1" onclick="getWeatherFive()">
+                    Five-Day
+                </button>
+            </div>
+        </div>
+    
+        <div class="container d-flex flex-column flex-lg-row justify-content-center align-items-center" id="cardDiv">
+        </div>
     </div>
     <script src="../assets/js/eleven.js"></script>
 </body>
