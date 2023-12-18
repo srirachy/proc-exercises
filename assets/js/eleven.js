@@ -73,10 +73,10 @@ const createCard = (d, m) => {
         <img class="card-img-top" src="${iconSrc}" alt="${weather.description} icon" />
         <div class="card-body d-flex flex-column justify-content-center align-items-center">
             <h4 class="card-title">${date}</h4>
-            <p class="card-text">Current: ${main.temp}</p>
-            <p class="card-text">Feels Like: ${main.feels_like}</p>
-            <p class="card-text">Max: ${main.temp_max}</p>
-            <p class="card-text">Min: ${main.temp_min}</p>
+            <p class="card-text">Current: ${main.temp.toFixed(1)}<span>&#176;</span>F</p>
+            <p class="card-text">Feels Like: ${main.feels_like.toFixed(1)}<span>&#176;</span>F</p>
+            <p class="card-text">Max: ${main.temp_max.toFixed(1)}<span>&#176;</span>F</p>
+            <p class="card-text">Min: ${main.temp_min.toFixed(1)}<span>&#176;</span>F</p>
         </div>
     </div>`;
     return card;
