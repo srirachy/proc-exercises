@@ -71,14 +71,14 @@ const createCard = (d, m) => {
     const iconSrc = `https://openweathermap.org/img/wn/${icon}d@4x.png`
     const card = `
     <div class="card ${m}">
-    <img class="card-img-top" src="${iconSrc}" alt="${weather.description} icon" />
-    <div class="card-body d-flex flex-column justify-content-center align-items-center">
-        <h4 class="card-title">${date}</h4>
-        <p class="card-text">Current: ${main.temp}</p>
-        <p class="card-text">Feels Like: ${main.feels_like}</p>
-        <p class="card-text">Max: ${main.temp_max}</p>
-        <p class="card-text">Min: ${main.temp_min}</p>
-    </div>
+        <img class="card-img-top" src="${iconSrc}" alt="${weather.description} icon" />
+        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+            <h4 class="card-title">${date}</h4>
+            <p class="card-text">Current: ${main.temp}</p>
+            <p class="card-text">Feels Like: ${main.feels_like}</p>
+            <p class="card-text">Max: ${main.temp_max}</p>
+            <p class="card-text">Min: ${main.temp_min}</p>
+        </div>
     </div>`;
     return card;
 }
